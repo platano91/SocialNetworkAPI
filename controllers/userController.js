@@ -7,6 +7,7 @@ module.exports = {
       .then(users => res.json(users))
       .catch(err => res.status(500).json(err));
   },
+  
   // Get a single user by ID
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
@@ -18,14 +19,16 @@ module.exports = {
         : res.json(user))
       .catch(err => res.status(500).json(err));
   },
+  
   // Create a new user
   createUser(req, res) {
     User.create(req.body)
       .then(user => res.json(user))
       .catch(err => res.status(500).json(err));
   },
-// Update a user by ID
-updateUser(req, res) {
+
+  // Update a user by ID
+  updateUser(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $set: req.body },
@@ -36,6 +39,7 @@ updateUser(req, res) {
         : res.json(user))
       .catch(err => res.status(500).json(err));
   },
+  
   // Delete a user by ID
   deleteUser(req, res) {
     User.findOneAndDelete({ _id: req.params.userId })
@@ -45,6 +49,7 @@ updateUser(req, res) {
           .then(() => res.json({ message: "User and their thoughts deleted!" })))
       .catch(err => res.status(500).json(err));
   },
+  
   // Add a friend to a user's friend list
   addFriend(req, res) {
     User.findOneAndUpdate(
@@ -57,6 +62,7 @@ updateUser(req, res) {
         : res.json(user))
       .catch(err => res.status(500).json(err));
   },
+  
   // Remove a friend from a user's friend list
   deleteFriend(req, res) {
     User.findOneAndUpdate(
