@@ -26,10 +26,9 @@ This project is licensed under the MIT license.
 undefined
 
 ## Tests
-Insomnia is used to test REST API calls.
 [demo-link](https://www.youtube.com/watch?v=_DLKhc8sLWQ)
+Insomnia is used to test REST API calls.
 
 ## Questions
 For questions, please contact 
 - GitHub: [platano91](https://github.com/platano91)
-- Email: [asdf@asdf.com](mailto:asdf@asdf.com)
